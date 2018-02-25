@@ -301,11 +301,13 @@ span .input-nav a:hover{
 .carousel{
 	margin-top: 5px;
 	position: relative;
+	left: 0;
+	top:0;
 	cursor: pointer;
 	height: 380px;
 }
 .carousel-center{
-	box-shadow: 0 0 1px 1px #fff;
+	box-shadow: 0 0 1px 1px #333;
 	background-image: url(../img/biejing1.jpg);
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -395,7 +397,8 @@ span .input-nav a:hover{
 	max-height: 52px;
 	padding-left: 15px;
 	color: #fff;
-	margin: 10px 0;
+	padding: 10px 0;
+	padding-left: 10px;
 }
 .inof-img{overflow:hidden;}
 .inof-img .img-1{
@@ -463,7 +466,6 @@ span .input-nav a:hover{
 	top: 30%;
 	padding: 36px 11px;
 	cursor: pointer;
-	user-select:none;
 }
 .arr-left{
 	left:-45px;
@@ -761,9 +763,11 @@ span .input-nav a:hover{
 	bottom: -35px;
 	left: 43%;
 }
+.dot-san span{
+	cursor: pointer;
+}
 .tabs{
 	margin-top: 200px;
-	height: 500px;
 	background: linear-gradient( to bottom, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0.0) 70%);
 }
 .tab-nav{position: relative;}
@@ -794,8 +798,12 @@ span .input-nav a:hover{
 	color: #fff;
 }
 /*.................................................*/
+
 .a1{
 	padding-top: 5px;
+	display: none;
+}
+.a-block{
 	display: block;
 }
 .jg-a{
@@ -887,6 +895,10 @@ span .input-nav a:hover{
 	right: 0px;
 	top: 45px;
 	padding: 5px 15px;
+	display: none;
+}
+.cpu-block{
+	display: block;
 }
 .tab-right{
 	display: none;
@@ -919,38 +931,15 @@ span .input-nav a:hover{
 	color: #fff; 
 }
 .sword-img{
-	width: 258px;
-    height: 134px;
+	width: 280px;
+    height: 149px;
     margin-top: 3px;
     background-size: cover;
     background-position: center center;
-    padding: 8px;
-    margin-bottom: 4px;
+    /*padding: 8px;*/
+    padding-bottom: 2px;
 }
-.sword-img1{
-	background-image: url(../img/q12.jpg);
-}
-.sword-img2{
-	background-image: url(../img/13.jpg);
-}
-.sword-img3{
-	background-image: url(../img/q14.jpg);
-}
-.sword-img4{
-	background-image: url(../img/q15.jpg);
-}
-.sword-img5{
-	background-image: url(../img/q16.jpg);
-}
-.sword-img6{
-	background-image: url(../img/q17.jpg);
-}
-.sword-img7{
-	background-image: url(../img/q18.jpg);
-}
-.sword-img8{
-	background-image: url(../img/q19.jpg);
-}
+.sword-img img{width: 100%;height: 100%;}
 /*........................................................................*/
 .center-two{width: 940px;margin: 0 auto;}
 .head-center-two{right: 0;}
@@ -991,6 +980,10 @@ span .input-nav a:hover{
 .plg{
 	margin-top: 50px;
 	height: 134px;
+	padding-left: 250px;
+}
+.plg .arr-left{
+	left: 205px;
 }
 .plg-zi:after{
 	content: "";
@@ -1031,6 +1024,10 @@ span .input-nav a:hover{
 .p-zi-two span:hover{
 	border: 1px solid #fff;
 }
+.plg-img{display: none;}
+.plg-block{
+	display: block;
+}
 .plg-img:after{
 	content: "";
 	display: block;
@@ -1068,6 +1065,8 @@ span .input-nav a:hover{
 }
 .foolr{
 	margin-top: 130px;
+	padding-left: 250px;
+	margin-bottom: 50px;
 }
 .foolr:after{
 	content: "";
@@ -1162,7 +1161,10 @@ span .input-nav a:hover{
 .p-1{
 	margin: 0;
 }
-
+.dot-plg{
+	top: 25px;
+	left: 45px;
+}
 
 
 
