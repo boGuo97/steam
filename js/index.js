@@ -14,7 +14,6 @@ $(".img-1").mouseenter(function(){
 		}
 		else{
 			$HT.eq(n).hide() 
-
 		}
 	}
 })
@@ -168,25 +167,57 @@ function Left(obj,EnenList,age3){
 	}
 }
   // 移上  下 显示隐藏  弹出层
+// ..................关闭弹出层..............
+$(".side").mouseenter(function(){
+	$(".side").hide()
+})
 $boxOne.mouseenter(function(){
 	$(".side").fadeIn(500)
 	clearInterval(UY)
+	$sideList = $(this).find(".side-lunbo li")
+	UI = setInterval(function(){
+		for(var i = 0;i < $sideList.length;i++){
+			$sideList.eq(i).hide()
+		}
+		if(k == $sideList.length-1){
+			k=0;	
+		}
+		else{
+			k++;
+		}
+		$sideList.eq(k).fadeIn()
+	},1000)
 })
 $boxOne.mouseleave(function(){
 	$(".side").hide()
 	clearInterval(UI)
+	for(var i = 0;i < $sideList.length;i++){
+			$sideList.eq(i).hide()
+		}
+	k = 0	
+	$sideList.eq(0).fadeIn()
+	k++
 	UY = setInterval(function(){
 		Right($boxOne,$spanListOne,$Carone)
 	},4000)
 })
-$boxTow.mouseenter(function(){
-	clearInterval(UP)
+$RightOne.mouseenter(function(){
+	clearInterval(UY)
 })
-$boxTow.mouseleave(function(){
-	UP = setInterval(function(){
-		Right($boxTow,$spanListTow,$Cartow)
-	},3000)
+$LeftOne.mouseenter(function(){
+	clearInterval(UY)	
 })
+$RightOne.mouseleave(function(){
+	UY = setInterval(function(){
+		Right($boxOne,$spanListOne,$Carone)
+	},2000)
+})
+$LeftOne.mouseleave(function(){
+	UY = setInterval(function(){
+		Right($boxOne,$spanListOne,$Carone)
+	},2000)	
+})
+
 // ...........................................小图轮播
 var k = 0;
 // ............................................................................
@@ -257,40 +288,25 @@ function yidong(DOT){
 UY = setInterval(function(){
 	Right($boxOne,$spanListOne,$Carone)
 },2000)
-UP = setInterval(function(){
-	Right($boxTow,$spanListTow,$Cartow)
-},3000)
 
-// ..................智能判断..............\
 
-$boxOne.mouseenter(function(){
-	var $sideList = $(this).find(".side-lunbo li")
-	UI = setInterval(function(){
-		for(var i = 0;i < $sideList.length;i++){
-			$sideList.eq(i).hide()
-		}
-		if(k == $sideList.length-1){
-			k=0;	
-		}
-		else{
-			k++;
-		}
-		$sideList.eq(k).fadeIn()
-	},1000)
-})
 // ......................................................................
-$(".tab-a").mouseenter(function(){
-	for(var j = 0;j < $(".tab-a").length;j++){
-		$(".tab-a").eq(j).attr("index",j)
-		$(".tab-right").eq(j).fadeOut();
+
+
+
+$(".jg-a").mouseenter(function(){
+	var Sun = $(this).index();
+	$(".jg-a").removeClass("jg-a-one")
+	$(".jg-a").eq(Sun).addClass("jg-a-one")
+	if(Sun == Sun){
+		console.log($(this))
 	}
-		var Num = $(this).attr("index")
-		$(".tab-right").eq(Num).fadeIn()
-		$(".tab-a").removeClass("tab-a-one")
-		$(this).addClass("tab-a-one")
-		$(this)<$(".fable").addClass("fable-one")
-		$(this)<$(".win span").addClass("span-one")
-		$(this)<$(".win em").addClass("em-one")
+	else{
+		$(".tab-right").hide()
+		$(".tab-right").eq(Sun).fadeOut(500,function(){
+			$(".tab-right").eq(Sun).fadeIn(500)
+		})
+	}
 })
 
 
