@@ -294,11 +294,11 @@ UY = setInterval(function(){
 
 
 
-$(".jg-a").mouseenter(function(){
+$(".jg-a").mousemove(function(){
 	var Sun = $(this).index();
 	$(".jg-a").removeClass("jg-a-one")
 	$(".jg-a").eq(Sun).addClass("jg-a-one")
-	if(Sun == Sun){
+	if($(".jg-a").hasClass("jg-a-one")){
 		console.log($(this))
 	}
 	else{
