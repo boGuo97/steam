@@ -421,5 +421,5 @@ $(".sert-n-right").click(function(){
 
 
 $(".sert-n-left").click(function(){
-	alert(1)
+	
 })
