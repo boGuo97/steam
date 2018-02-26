@@ -941,26 +941,7 @@ span .input-nav a:hover{
 }
 .sword-img img{width: 100%;height: 100%;}
 /*........................................................................*/
-.center-two{width: 940px;margin: 0 auto;}
-.head-center-two{right: 0;}
-.nav-rigth-two{padding-left: 0;}
-.htvb-h1{
-	font-size: 48px;
-    text-transform: none;
-    padding-top: 20px;
-    color: #fff;
-    font-weight: 300;
-    text-shadow: 1px 1px 0 rgba( 0, 0, 0, 0.4 );
-    font-family: "Motiva Sans", Sans-serif;
-    margin-top: 5px;
-}
-.htvb-p{
-	margin-bottom: 40px;
-    font-size: 18px;
-    min-height: 5px;
-    font-weight: 300;
-    color: #9099a1;
-}
+
 .carousel-ul-two{
 	width: 465px;
 	height: 266px;
@@ -1245,4 +1226,133 @@ span .input-nav a:hover{
 	width: 16px;
 	height: 16px;
 	margin-right: 7px;
+}
+
+
+
+
+
+
+
+
+.Body{
+	background: #1b2838
+}
+.center-two{width: 940px;margin: 0 auto;}
+.head-center-two{right: 0;}
+.nav-rigth-two{padding-left: 0;}
+.htvb-span{
+	color: #56707f;
+    font-size: 12px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    margin-top: 25px;
+}
+.htvb-span a{
+	color: #8f98a0;
+}
+.htvb-fl:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.htvb-p{
+	color: white;
+    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    line-height: 32px;
+    padding: 5px 0;
+    float: left;
+}
+.htvb-fl{padding-bottom: 12px;}
+.htvb-fl .shequ{
+	display: block;
+	width: 92px;
+	height: 32px;
+	float: right;
+	background-color: rgba( 103, 193, 245, 0.2 );
+	color: #67c1f5;
+	border-radius: 2px;
+	line-height: 32px;
+	text-align: center;
+	font-size: 15px;
+}
+.shequ:hover{
+	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+	color: #fff;
+}
+.sert-ul li{
+	display: none;
+}
+.sert-ul .fousr{
+	display: block;
+}
+.sert-left{position: relative;top: 0;left: 0;}
+.sert-sun{
+	width: 600px;
+	/*padding: 0 3px;*/
+	overflow: hidden;
+}
+.sert-none:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.sert-none{
+	width: 2000px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.sert-none span{
+	display: block;
+	width: 116px;
+	height: 65px;
+	float: left;
+	margin-right: 5px;
+	position: relative;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+}
+.sert-none .margin{
+	margin: 0;
+}
+.sert-none img{width: 100%;height: 100%}
+.kuang{
+	width: 116px;
+	height: 77px;
+	position: absolute;
+	bottom: 18px;
+	left: 0px;
+	cursor: pointer;
+}
+.kuang img{
+	width: 100%;
+}
+.sert-nav{
+	height: 18px;
+	position: relative;
+	top: 7px;
+	left: 0;
+}
+.sert-n-left{
+	position: absolute;
+    width: 38px;
+    top: 0;
+    bottom: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgba( 35, 60, 81, 0.8);
+}
+.sert-nav .name{
+	display: inline-block;
+    background-position: -18px 0px;
+    background-repeat: no-repeat;
+    width: 9px;
+    height: 7px;
+    background-image: url(../img/jian.png);
+    background-repeat: no-repeat;
+    margin-left: 13px;
+    margin-top: 5px;
 }

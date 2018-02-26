@@ -383,4 +383,12 @@ $(".jg-a").mouseenter(function(){
 	$(this).addClass("jg-a-one")	
 })
 
+// ..............................游戏详情页js...............................
+var Kuang = document.getElementsByClassName("kuang")[0]
+$(".sert-none span").click(function(){
+	var Iun = $(this).index()
+	Kuang.style.left = (Iun * 121) + "px";
+	$(".sert-ul li").hide()
+	$(".sert-ul li").eq(Iun).fadeIn()
+})
 
