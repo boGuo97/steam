@@ -1287,11 +1287,9 @@ span .input-nav a:hover{
 .sert-ul .fousr{
 	display: block;
 }
-.sert-left{position: relative;top: 0;left: 0;}
+.sert-left{position: relative;top: 0;left: 0;width: 600px;overflow: hidden;height: 440px;}
 .sert-sun{
 	width: 600px;
-	/*padding: 0 3px;*/
-	overflow: hidden;
 }
 .sert-none:after{
 	content: "";
@@ -1303,27 +1301,25 @@ span .input-nav a:hover{
 	position: relative;
 	top: 0;
 	left: 0;
+	margin: 3px 0;
 }
 .sert-none span{
 	display: block;
 	width: 116px;
 	height: 65px;
 	float: left;
-	margin-right: 5px;
+	margin: 0 2px;
 	position: relative;
 	left: 0;
 	top: 0;
 	cursor: pointer;
 }
-.sert-none .margin{
-	margin: 0;
-}
-.sert-none img{width: 100%;height: 100%}
+.sert-none img{width: 99%;height: 100%}
 .kuang{
 	width: 116px;
 	height: 77px;
 	position: absolute;
-	bottom: 18px;
+	bottom: 0px;
 	left: 0px;
 	cursor: pointer;
 }
@@ -1335,15 +1331,25 @@ span .input-nav a:hover{
 	position: relative;
 	top: 7px;
 	left: 0;
+	width: 600px;
 }
 .sert-n-left{
+    left: 0;
+}
+.sert-n-right{
+    right: 0;
+}
+.sert-n-name{
 	position: absolute;
     width: 38px;
+    height: 18px;
     top: 0;
-    bottom: 0;
     border-radius: 3px;
     cursor: pointer;
     background-color: rgba( 35, 60, 81, 0.8);
+}
+.sert-n-name:hover{
+	background: linear-gradient(135deg, #3d6c8d 0%,#2e5470 100%);
 }
 .sert-nav .name{
 	display: inline-block;
@@ -1355,4 +1361,33 @@ span .input-nav a:hover{
     background-repeat: no-repeat;
     margin-left: 13px;
     margin-top: 5px;
+}
+.sert-n-right:hover .name{
+	background-position: -9px -7px;
+}
+.sert-n-left:hover .name{
+	background-position: -18px -7px;
+}
+.sert-n-right .name{
+	background-position: -9px 0px;
+	margin-left: 16px;
+}
+.sert-n-center{
+	position: absolute;
+	width: 522px;
+	height: 18px;
+	top: 0;
+	left: 39px;
+	right: 39px;
+	background-color: rgba(0,0,0,.2);
+}
+.sert-n-center .tuodong{
+	width: 60px;
+	height: 18px;
+	cursor: pointer;
+	background-color: rgba( 35, 60, 81, 0.7 );
+	border-radius: 3px;
+}
+.sert-n-center .tuodong:hover{
+	background: linear-gradient(135deg, #3d6c8d 0%,#2e5470 100%);
 }

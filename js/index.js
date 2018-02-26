@@ -385,10 +385,41 @@ $(".jg-a").mouseenter(function(){
 
 // ..............................游戏详情页js...............................
 var Kuang = document.getElementsByClassName("kuang")[0]
-$(".sert-none span").click(function(){
-	var Iun = $(this).index()
-	Kuang.style.left = (Iun * 121) + "px";
+var i = 0;
+$(".sert-none span").click(function(){;
+	Iun = $(this).index()
 	$(".sert-ul li").hide()
 	$(".sert-ul li").eq(Iun).fadeIn()
+	i = Iun;
+	Kuang.style.left= (Iun * 120) + "px";
+})
+$(".sert-n-right").click(function(){
+	i++;
+	$(".kuang").animate({
+		left:(i * 120) + "px"	
+	},200)
+	if(i % 5 == 0){
+		$(".sert-none").animate({
+			left: -600 + "px"
+		},200)
+	}
+	if(i == $(".sert-none span").length){
+		$(".sert-none").animate({
+			left: 0 + "px"
+		})
+		i=0
+		$(".sert-ul li").eq(i).show()
+		$(".kuang").animate({
+			left: 0 + "px"
+		},0)
+	}
+	$(".sert-ul li").hide()
+	$(".sert-ul li").eq(i).fadeIn()
 })
 
+
+
+
+$(".sert-n-left").click(function(){
+	alert(1)
+})
