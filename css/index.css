@@ -303,7 +303,6 @@ span .input-nav a:hover{
 	position: relative;
 	left: 0;
 	top:0;
-	cursor: pointer;
 	height: 380px;
 }
 .carousel-center{
@@ -495,6 +494,7 @@ span .input-nav a:hover{
 	border-radius: 2px;
 	background-color: hsla(202,60%,100%,0.2);
 	margin-right: 5px;
+	cursor: pointer;
 }
 .dot .dot-span{
 	background-color: #fff;
@@ -1287,7 +1287,7 @@ span .input-nav a:hover{
 .sert-ul .fousr{
 	display: block;
 }
-.sert-left{position: relative;top: 0;left: 0;width: 600px;overflow: hidden;height: 440px;}
+.sert-left{position: relative;top: 0;left: 0;width: 600px;height: 440px;}
 .sert-sun{
 	width: 600px;
 }
@@ -1301,7 +1301,7 @@ span .input-nav a:hover{
 	position: relative;
 	top: 0;
 	left: 0;
-	margin: 3px 0;
+	margin: 3px
 }
 .sert-none span{
 	display: block;

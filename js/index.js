@@ -421,5 +421,30 @@ $(".sert-n-right").click(function(){
 
 
 $(".sert-n-left").click(function(){
-	
+	i--
+	// $(".kuang").animate({
+	// 	left:-(i * 120) + "px"	
+	// },200)
+	if(i != 0){
+		$(".sert-none").animate({
+			left: (i*120) + "px"
+		},200)
+	}
+	if(i % 5 == 0){
+		$(".sert-none").animate({
+			left: 0 + "px"
+		},200)
+	}
+	// if(i == $(".sert-none span").length){
+	// 	$(".sert-none").animate({
+	// 		left: -1200 + "px"
+	// 	})
+	// 	i=0
+	// 	$(".sert-ul li").eq(i).show()
+	// 	$(".kuang").animate({
+	// 		left: 0 + "px"
+	// 	},0)
+	// }
+	$(".sert-ul li").hide()
+	$(".sert-ul li").eq(i).fadeIn()
 })
