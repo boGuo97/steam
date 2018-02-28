@@ -384,9 +384,12 @@ $(".jg-a").mouseenter(function(){
 })
 
 // ..............................游戏详情页js...............................
+$(".sert-none").css({
+	width : $(".sert-none span").length * 120 + "px"
+})
 var Kuang = document.getElementsByClassName("kuang")[0]
 var i = 0;
-var DQ = 0;
+var L = 0;
 $(".sert-none span").click(function(){;
 	Iun = $(this).index()
 	$(".sert-ul li").hide()
@@ -410,12 +413,10 @@ $(".sert-n-right").click(function(){
 	}
 	var Fun = parseInt($(".sert-none span").length - (i))
 	if(i % 5 == 0&&$(".sert-none span").length - (i+1) < 5){
-		// DQ++;
 		$(".sert-none").animate({
 			left:-(i-(5 - Fun))*120                                                                       
 		},200)
 	}
-	// DQ = 0;
 	if(i == $(".sert-none span").length){
 		$(".sert-none").animate({
 			left: 0 + "px"
@@ -434,23 +435,25 @@ $(".sert-n-right").click(function(){
 
 })
 $(".sert-n-left").click(function(){
-	i = $(".sert-none span").length
-	i--
-	$(".kuang").animate({
-		left:-(i * 120) + "px"	
-	},200)
-	if(i != 0){
-		$(".sert-none").animate({
-			left: -(600) + "px"
+	var LB = $(".sert-none span").length+L--
+	console.log($(".sert-none span").length)
+	console.log(LB)
+	if( LB !== 0){
+		// if($(".sert-none span").length - LBtwo < 5)
+		LBtwo = $(".sert-none span").length 
+		$(".kuang").animate({
+			left:(LB-1) * 120 + "px"	
 		},200)
-	}
-	if(i % 5 == 0){
 		$(".sert-none").animate({
-			left: 0 + "px"
-		},200)
+			left: -(LBtwo * 120)+600 + "px"
+		})
 	}
-	$(".sert-ul li").hide()
-	$(".sert-ul li").eq(i).fadeIn()
+	else{
+		// $(".sert-none").animate({
+		// 	left: -(LB * 120) + "px"
+		// })
+		// 	console.log(1)
+	}
 })
 
 
@@ -466,19 +469,21 @@ var Sert = document.getElementsByClassName("sert-n-center")[0]
 Tuo.onmousedown = function(event){
 	X = event.clientX;
 	ml = parseInt(this.style.left);
-	// sertWidth = $(".sert-none span").width()
 	var _this = this
-	var cone = $().parent().width()
-	var cane = $(this).parent().width()-$(this).width()
+	var cone = $(".sert-none").width()
+	var cane = $(this).parent().width()
 	window.onmousemove = function(event){
 		xn = event.clientX;
 		Tuo.style.left = xn-(X-ml) + "px";
-		if(xn-(X-ml) > cone-Tuo.offsetWidth){
-			_this.style.left = cone-Tuo.offsetWidth + "px";
+		var crne = Tuo.style.left
+		if(xn-(X-ml) > cane-Tuo.offsetWidth){
+			_this.style.left = cane-Tuo.offsetWidth + "px";
 		}
 		if(xn-(X-ml) < 0){
 			_this.style.left = 0;
 		}
+		console.log( parseInt(_this.style.left)/cone)
+		// console.log((cane-60)/cone)
 		// if()
 	}
 	window.onmouseup = function(event){
