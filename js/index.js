@@ -386,6 +386,7 @@ $(".jg-a").mouseenter(function(){
 // ..............................游戏详情页js...............................
 var Kuang = document.getElementsByClassName("kuang")[0]
 var i = 0;
+var DQ = 0;
 $(".sert-none span").click(function(){;
 	Iun = $(this).index()
 	$(".sert-ul li").hide()
@@ -395,14 +396,26 @@ $(".sert-none span").click(function(){;
 })
 $(".sert-n-right").click(function(){
 	i++;
+	conut = $(".sert-none span").length
 	$(".kuang").animate({
 		left:(i * 120) + "px"	
 	},200)
-	if(i % 5 == 0){
+	if(i % 5 == 0&&$(".sert-none span").length - i >= 5){
 		$(".sert-none").animate({
-			left: -600 + "px"
+			left: -(i*120) + "px"
+		},200)
+		$(".tuodong").animate({
+			left:462 + "px"
+		},500)
+	}
+	var Fun = parseInt($(".sert-none span").length - (i))
+	if(i % 5 == 0&&$(".sert-none span").length - (i+1) < 5){
+		// DQ++;
+		$(".sert-none").animate({
+			left:-(i-(5 - Fun))*120                                                                       
 		},200)
 	}
+	// DQ = 0;
 	if(i == $(".sert-none span").length){
 		$(".sert-none").animate({
 			left: 0 + "px"
@@ -412,22 +425,23 @@ $(".sert-n-right").click(function(){
 		$(".kuang").animate({
 			left: 0 + "px"
 		},0)
+		$(".tuodong").animate({
+			left: 0 + "px"
+		},500)
 	}
 	$(".sert-ul li").hide()
 	$(".sert-ul li").eq(i).fadeIn()
+
 })
-
-
-
-
 $(".sert-n-left").click(function(){
+	i = $(".sert-none span").length
 	i--
-	// $(".kuang").animate({
-	// 	left:-(i * 120) + "px"	
-	// },200)
+	$(".kuang").animate({
+		left:-(i * 120) + "px"	
+	},200)
 	if(i != 0){
 		$(".sert-none").animate({
-			left: (i*120) + "px"
+			left: -(600) + "px"
 		},200)
 	}
 	if(i % 5 == 0){
@@ -435,16 +449,39 @@ $(".sert-n-left").click(function(){
 			left: 0 + "px"
 		},200)
 	}
-	// if(i == $(".sert-none span").length){
-	// 	$(".sert-none").animate({
-	// 		left: -1200 + "px"
-	// 	})
-	// 	i=0
-	// 	$(".sert-ul li").eq(i).show()
-	// 	$(".kuang").animate({
-	// 		left: 0 + "px"
-	// 	},0)
-	// }
 	$(".sert-ul li").hide()
 	$(".sert-ul li").eq(i).fadeIn()
 })
+
+
+
+
+
+
+
+
+
+var Tuo = document.getElementsByClassName("tuodong")[0];
+var Sert = document.getElementsByClassName("sert-n-center")[0]
+Tuo.onmousedown = function(event){
+	X = event.clientX;
+	ml = parseInt(this.style.left);
+	// sertWidth = $(".sert-none span").width()
+	var _this = this
+	var cone = $().parent().width()
+	var cane = $(this).parent().width()-$(this).width()
+	window.onmousemove = function(event){
+		xn = event.clientX;
+		Tuo.style.left = xn-(X-ml) + "px";
+		if(xn-(X-ml) > cone-Tuo.offsetWidth){
+			_this.style.left = cone-Tuo.offsetWidth + "px";
+		}
+		if(xn-(X-ml) < 0){
+			_this.style.left = 0;
+		}
+		// if()
+	}
+	window.onmouseup = function(event){
+		window.onmousemove = null;
+	}
+}
