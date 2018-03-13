@@ -1,4 +1,5 @@
-var Dot = document.getElementById("dot")
+function Js(){
+	var Dot = document.getElementById("dot")
 $HT = $(".carousel-ul li")
 $(".img-1").mouseenter(function(){
 	var inof = document.getElementsByClassName('img-1')
@@ -57,6 +58,7 @@ $DotSi = $(".carousel-si .dot")
 // ..........................................................................
 //  第一个点击事件
 $RightOne.click(function(){
+	console.log(1)
 	Right($boxOne,$spanListOne,$Carone)
 })
 $LeftOne.click(function(){
@@ -390,6 +392,7 @@ $(".sert-none").css({
 var Kuang = document.getElementsByClassName("kuang")[0]
 var i = 0;
 var L = 0;
+var LTT = 0;
 $(".sert-none span").click(function(){;
 	Iun = $(this).index()
 	$(".sert-ul li").hide()
@@ -399,6 +402,7 @@ $(".sert-none span").click(function(){;
 })
 $(".sert-n-right").click(function(){
 	i++;
+	// console.log(i)
 	conut = $(".sert-none span").length
 	$(".kuang").animate({
 		left:(i * 120) + "px"	
@@ -411,7 +415,7 @@ $(".sert-n-right").click(function(){
 			left:462 + "px"
 		},500)
 	}
-	var Fun = parseInt($(".sert-none span").length - (i))
+	Fun = parseInt($(".sert-none span").length - (i))
 	if(i % 5 == 0&&$(".sert-none span").length - (i+1) < 5){
 		$(".sert-none").animate({
 			left:-(i-(5 - Fun))*120                                                                       
@@ -432,38 +436,42 @@ $(".sert-n-right").click(function(){
 	}
 	$(".sert-ul li").hide()
 	$(".sert-ul li").eq(i).fadeIn()
-
 })
 $(".sert-n-left").click(function(){
-	var LB = $(".sert-none span").length+L--
-	console.log($(".sert-none span").length)
-	console.log(LB)
-	if( LB !== 0){
-		// if($(".sert-none span").length - LBtwo < 5)
-		LBtwo = $(".sert-none span").length 
+	i--
+	leftW = $(".sert-sun").width()
+	//判断当前为正常情况
+	if(i !== -1){
+		// 正常情况下白框的移动
 		$(".kuang").animate({
-			left:(LB-1) * 120 + "px"	
+			left:-($(".sert-none span").length - i * 120)+13 + "px"	
 		},200)
-		$(".sert-none").animate({
-			left: -(LBtwo * 120)+600 + "px"
-		})
+		if($(".sert-none span").length - i >= 5){
+			if(i+1 > 5){
+				$(".sert-none").animate({
+					left: -((i+1) * 120)+120 + "px"
+				})
+			}
+			else{
+				$(".sert-none").animate({
+					left: 0 + "px"
+				})
+			}
+		}
+
 	}
 	else{
-		// $(".sert-none").animate({
-		// 	left: -(LB * 120) + "px"
-		// })
-		// 	console.log(1)
+		i = $(".sert-none span").length-1
+		$(".kuang").animate({
+			left:(i) * 120 + "px"	
+		},200)
+		$(".sert-none").animate({
+			left: -(i+1) *120 +600+ "px"
+		})
 	}
+	$(".sert-ul li").hide()
+	$(".sert-ul li").eq(i).fadeIn()
 })
-
-
-
-
-
-
-
-
-
 var Tuo = document.getElementsByClassName("tuodong")[0];
 var Sert = document.getElementsByClassName("sert-n-center")[0]
 Tuo.onmousedown = function(event){
@@ -482,11 +490,60 @@ Tuo.onmousedown = function(event){
 		if(xn-(X-ml) < 0){
 			_this.style.left = 0;
 		}
-		console.log( parseInt(_this.style.left)/cone)
-		// console.log((cane-60)/cone)
-		// if()
 	}
 	window.onmouseup = function(event){
 		window.onmousemove = null;
 	}
 }
+var YYU = document.getElementById("YYU")
+var deng = document.getElementsByClassName("deng")[0]
+var inOne = document.getElementById("inone")
+var inTwo = document.getElementById("intwo")
+deng.onclick =function(){
+	txtO = inOne.value
+	txtT = inTwo.value
+	if(YYU.checked){
+		Ser("valued",txtO,100)
+		Ser("class",txtT,100)
+		console.log(Set("valued"))
+		console.log(Set("class"))
+	}
+	else{
+		$("#inone").val("")
+		$("#intwo").val("")
+	}
+	if(inOne.value !=="" && inTwo.value !== ""){
+		alert("登陆成功")
+	}
+}
+if(Set("valued") !== ""&&Set("class")!==""){
+	window.onload = function(){
+		$("#inone").val(Set("valued"))
+		$("#intwo").val(Set("class"))
+	}
+}
+function Ser(value,pri,time){
+	var date = new Date()
+	date.setDate(time)
+	document.cookie =value+"="+pri+";expires=" + date
+}
+function Set(attribute){
+	var set = document.cookie
+	var messageIndex = set.indexOf(attribute)
+	var endIndex = set.indexOf(";",messageIndex)
+	if(endIndex == -1){
+		endIndex = document.cookie.length
+	}
+	var result = set.slice(messageIndex,endIndex).split("=")[1]
+	return result
+}
+}
+
+
+
+
+
+
+
+
+

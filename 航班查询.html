@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style>
+		*{padding: 0;margin: 0;}
+		#but{
+			width: 60px;
+			height: 30px;
+			background-color: #555;
+			color: #fff;
+			border:none;
+			outline: none;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+		#but:hover{color: #ddd;}
+		#input{
+			width: 200px;
+			height: 30px;
+			margin-left: 150px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="input">
+	<button id="but">查询</button>
+	<table class="table">
+		<thead>
+			<th>航班号</th>
+			<th>出发城市名称</th>
+			<th>到达城市名称</th>
+			<th>计划起飞时间</th>
+			<th>计划到达时间</th>
+			<th>实际起飞时间</th>
+			<th>实际到达时间</th>
+			<th>航班状态</th>
+		</thead>
+		<tbody id="data">
+			<tr id="Tr">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		var input = document.getElementById("input")
+		var tdList = document.getElementById("data").getElementsByTagName("td")
+		// var data = document.getElementById("data")
+		var but = document.getElementById("but")
+		function callbackfn(data){
+			tdList[0].innerHTML = data.result.FlightNo;
+			tdList[1].innerHTML = data.result.DepCity;
+			tdList[2].innerHTML = data.result.ArrCity;
+			tdList[3].innerHTML = data.result.DepScheduled;
+			tdList[4].innerHTML = data.result.ArrScheduled;
+			tdList[5].innerHTML = data.result.DepActual;
+			tdList[6].innerHTML = data.result.ArrActual;
+			tdList[7].innerHTML = data.result.FlightState;
+			if(data.result.FlightState == "延误"){
+				tdList[7].style.color = "red"
+			}
+			else{
+				tdList[7].style.color = "#333"	
+			}
+		}
+		but.onclick = function(){
+			var script = document.createElement("script")
+			script.setAttribute("src","http://op.juhe.cn/flight/df/fs?key=fa010ff939cfc564f6d184c69e31e7ec&callback=callbackfn&flightNo=" + input.value)
+				document.getElementsByTagName('head')[0].appendChild(script)
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="but">点击</button>
+	<script>
+		var but = document.getElementById("but")
+		but.onclick = function(){
+			var jav = new XMLHttpRequest()
+			jav.open("GET","http://192.168.1 .113/text.txt")
+			jav.send()
+			jav.onreadystatechange  = function(){
+				if(jav.readyState == 4&&jav.status ==200){
+					document.getElementsByTagName('body')[0].innerHTML = jav.responseText
+				}
+			}
+		}
+	</script>
+</body>
+</html>

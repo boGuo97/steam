@@ -3,10 +3,10 @@ a{text-decoration: none;}
 li{list-style: none;}
 body{
 	background: url(../img/body.png) center top no-repeat #1b2838;font-size: 11px;
-		-webkit-user-select:none;
-	    -moz-user-select:none;
-	    -ms-user-select:none;
-	    user-select:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;	    
 }
 .center{width: 1190px;margin: 0 auto;}
 .dot-bb{width: 100%;height: 20px;position: relative;}
@@ -189,6 +189,11 @@ body{
 	clear: both;
 }
 .nav-nav-left{float: left;}
+.nav-nav-left:after{
+	content: "";
+	display: block;
+	clear: both;
+}
 .nav-nav span{
 	display: inline-block;
 	border-right: 1px solid rgba( 16, 21, 25, 0.3);
@@ -198,6 +203,10 @@ body{
 	background-repeat: no-repeat;
 	background-position: 44px 12px; 
 	position: relative;
+}
+.nav-nav-left span{
+ 	float: left;
+	display: block;
 }
 .nav-nav span:hover{
 	background-color: #d9dadd;
@@ -320,24 +329,13 @@ span .input-nav a:hover{
 	position: relative;
 }
 .over{overflow: hidden;float: left;box-shadow: 0 0 10px 0 #000;}
-.showList{display:block;}
+.showxian{display:block;}
 .carousel-ul{
 	width: 616px;
 	height: 353px;
 	background-color: #000;
 	cursor: pointer;
-	background-image: url(../img/l1.jpg);
 }
-.cc1{background-image: url(../img/l7.jpg);}
-.cc2{background-image: url(../img/l6.jpg);}
-.cc3{background-image: url(../img/l12.jpg);}
-.cc4{background-image: url(../img/l13.jpg);}
-.cc5{background-image: url(../img/l14.jpg);}
-.cc6{background-image: url(../img/l15.jpg);}
-.cc7{background-image: url(../img/l16.jpg);}
-.cc8{background-image: url(../img/l17.jpg);}
-.cc9{background-image: url(../img/l18.jpg);}
-.cc10{background-image: url(../img/l19.jpg);}
 .carousel-ul li{
 	display: none;
 }
@@ -385,8 +383,24 @@ span .input-nav a:hover{
 .ceping span{color: purple;}
 .side-center .inof-span{
 	background-color: #555;color: #fff;padding:3px 10px;text-align: center;
-	margin-top: 8px;display:inline-block;width: 50px;
+	margin-top: 8px;display:inline-block;border-radius: 2px;
 }
+.ceping .haoping{color: skyblue}
+.ceping .pinglunshu{color: #fff}
+.inof-zhi .zhekou{
+	padding: 0 3px;
+	color: #a4d007;
+    background: #4c6b22;
+    display: inline-block;
+}
+.inof-zhi .yuanjia{
+	display: inline;
+	text-decoration: line-through;
+    color: #626366;
+    font-size: 11px;
+    background: #000000
+}
+.xianse{background-color: #000}
 /*.......................................................................*/
 .carousel-ul img{
 	width: 100%;
@@ -1247,6 +1261,13 @@ span .input-nav a:hover{
 .center-two{width: 940px;margin: 0 auto;}
 .head-center-two{right: 0;}
 .nav-rigth-two{padding-left: 0;}
+.htvb-se{
+    background-image: url(../img/anying.png);
+   	background-position: bottom;
+   	width: 100%;
+    padding-bottom: 1px;
+    background-repeat: no-repeat;
+}
 .htvb-span{
 	color: #56707f;
     font-size: 12px;
@@ -1306,30 +1327,25 @@ span .input-nav a:hover{
 	top: 0;
 	left: 0;
 	width: 600px;
-	/*overflow: hidden;*/
+	overflow: hidden;
  	float: left;
 	height: 440px;
 }
 .sert-sun{
 	width: 600px;
 }
-.sert-none:after{
-	content: "";
-	display: block;
-	clear: both;
-}
 .sert-none{
-	/*width: 30000px;*/
 	position: relative;
 	top: 0;
 	left: 0;
-	margin: 3px
+	margin: 3px;
+	display:flex;
+	justify-content:space-between;
 }
 .sert-none span{
 	display: block;
 	width: 116px;
 	height: 65px;
-	float: left;
 	margin: 0 2px;
 	position: relative;
 	left: 0;
@@ -1430,11 +1446,11 @@ span .input-nav a:hover{
 	width: 100%;
 }
 .sert-r-zi{
-	max-height: 111px; */
-     overflow: hidden; 
-     font-size: 13px; 
-     line-height: 18px; 
-     padding-right: 16px; 
+	max-height: 111px;
+    overflow: hidden; 
+    font-size: 13px; 
+    line-height: 18px; 
+    padding-right: 16px; 
 }
 .user_reviews {
     font-size: 12px;
@@ -1442,8 +1458,8 @@ span .input-nav a:hover{
     margin-top: 10px;
 }
 .user_reviews .subtitle, .glance_ctn .subtitle {
-     text-transform: uppercase; 
-     font-size: 10px; 
+    text-transform: uppercase; 
+    font-size: 10px; 
     padding-right: 10px;
     min-width: 94px;
 }
@@ -1496,6 +1512,449 @@ span .input-nav a:hover{
 	background: linear-gradient(135deg, #67c1f5 0%,#417a9b 100%);
 	color: #fff;
 }
-.mmmm{
-	height: 500px;
+.obc{
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+    color: #c6d4df;
+    font-size: 12px;
+}
+.queue_ctn{
+    background: rgba( 0, 0, 0, 0.2 );
+    margin-bottom: 16px;
+}
+.queue_actions_ctn{
+	padding: 16px;
+}
+.queue_actions_ctn p{display: inline;}
+.queue_actions_ctn a{
+	color: #fff;
+}
+.queue_actions_ctn a:hover{
+	color:#66c0f4; 
+}
+.page_content{
+	font-family: Arial, Helvetica, sans-serif;
+    color: #c6d4df;
+    font-size: 12px;
+}
+.page_content:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.leftcol-L{
+	width: 616px;
+    float: left;
+    font-size: 14px;
+    color: #acb2b8;
+    margin-top: 16px;
+}
+.purchase_note{
+	border: 1px solid #a25024;
+    border-radius: 3px;
+    width: 584px;
+    color: #acb2b8;
+    font-size: 14px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    padding: 15px 15px;
+    margin-bottom: 15px;
+}
+.purchase_note b{
+	font-weight: normal;
+    color: #f47b20;
+}
+.game_area_purchase_game_wrapper{
+	margin-bottom: 28px;
+	font-size: 14px;
+    color: #acb2b8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.game_area_purchase_game{
+	background: linear-gradient(135deg, rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%);
+	font-size: 12px;
+    color: #b0aeac;
+    padding: 16px;
+    padding-bottom: 26px;
+    position: relative;
+    z-index: 1;
+}
+.game_area_purchase_game:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.game_area_purchase_game h1{
+	font-size: 21px;
+    font-family: "Motiva Sans", Sans-serif;
+    color: #ffffff;
+    font-weight: normal;
+    float: left;
+}
+.game_area_purchase_platform{
+	float:right;
+}
+.game_area_purchase_platform span{
+	display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+}
+.win{
+	background-image: url(../img/win.png);
+}
+.game_area_purchase_platform .hmd_separator{
+	border-left: 1px solid #CCC;
+    width: 1px;
+    margin: 0px 5px;
+}
+.htcvive{
+	background-image: url(../img/htc.png);
+}
+.oculusrift{
+	background-image: url(../img/oc.png);
+}
+.game_purchase_action{
+	position: absolute;
+    right: 16px;
+    bottom: -17px;
+    left: 16px;
+    text-align: right;
+}
+.game_purchase_action_bg{
+	height: 32px;
+    vertical-align: bottom;
+    display: inline-block;
+    background-color: #000000;
+    padding: 2px 2px 2px 0px;
+    border-radius: 2px;
+    border-radius: 2px;
+    white-space: nowrap;
+    font-size: 0;
+}
+.game_purchase_price{
+	background-color: #000000;
+    font-size: 13px;
+    padding-top: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 24px;
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+.btn_addtocart{
+	font-size: 12px;
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+.btn_addtocart a{
+	border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #D2E885;
+  	background: linear-gradient( to bottom, rgba(121,153,5,1) 5%, rgba(83,105,4,1) 95%);
+}
+.btn_addtocart span{
+	border-radius: 2px;
+    display: block;
+    background: transparent;
+    text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.1 );
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+}
+.early_access_announcements{
+	margin: 30px 0 0px 0;
+	font-size: 14px;
+    color: #acb2b8;
+}
+.early_access_announcements .ear-h2{
+	text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    padding-top: 2px;
+    background-image: url(../img/rule.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding-bottom: 3px;
+}
+.ear-h2 a{
+	float: right;
+    background-color: rgba( 103, 193, 245, 0.2 );
+    border-radius: 1px;
+    color: #67c1f5;
+    font-size: 11px;
+    padding: 2px 4px;
+    line-height: normal;
+}
+.ear-h2 a:hover{
+	background: linear-gradient(135deg, #67c1f5 0%,#417a9b 100%);
+	color: #fff;
+}
+.post{
+	color: #8f98a0;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    overflow: hidden;
+}
+.container{
+	height: 195px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+.container h2{
+	color: #56707F;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    height: auto;
+    margin: 5px 0 0 0;
+    background: transparent;
+    line-height: 14px;
+}
+.container h1{
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: normal;
+}
+.container a{
+	color: #ffffff;
+}
+.br{
+	background-color: #2f4459;
+    height: 1px;
+    margin: 5px 0;
+}
+.post .more a{
+	color: #67c1f5;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.post .comments{
+	color: #56707F;
+    font-size: 11px;
+    float: right;
+    display: block;
+}
+.game_page_autocollapse_ctn{
+	position: relative;
+	font-size: 14px;
+    color: #acb2b8;
+}
+.game_page_autocollapse{
+	overflow: hidden;
+}
+.game_area_description{
+	line-height: 1.5em;
+    font-size: 14px;
+    margin-top: 30px;
+    overflow: hidden;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+}
+.game_area_description h2{
+	text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    padding-top: 2px;
+    line-height: 26px;
+    background-image: url(../img/rule.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.game_area_description .bb_ul{
+	color: #acb2b8;
+    margin-left: 16px;
+}
+.bb_ul li{
+	margin-bottom: 8px;
+    list-style-type: square;
+}
+.sys_req{
+	margin-top: 30px;
+}
+.sys_req h2{
+	text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    padding-top: 2px;
+    background-image: url(../img/rule.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.sysreq_contents{
+	margin-top: 10px;
+	font-size: 12px;
+}
+.game_area_sys_req_leftCol{
+	float: left;
+    width: 300px;
+}
+.game_area_sys_req_leftCo ul,.game_area_sys_req_rightCol ul{
+	list-style-type: none;
+	margin-left: 0px;
+    line-height: 18px;
+}
+.game_area_sys_req_leftCol li,.game_area_sys_req_rightCol li{
+	list-style-type: none;
+}
+.game_area_sys_req_leftCol strong,.game_area_sys_req_rightCol strong{
+	font-weight: normal;
+    font-size: 11px;
+    color: #4582A5;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 4px;
+}
+.bb_ul{
+	margin-left: 0;
+}
+.bb_ul strong{
+	color: #61686D;
+    font-size: 12px;
+    margin-right: 4px;
+    font-weight: normal;
+    margin-bottom: 2px;
+    text-transform: none;
+}
+.game_area_sys_req_rightCol{
+	margin-left: 8px;
+	float: left;
+    width: 300px;
+}
+.block{
+    margin-top: 40px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #acb2b8;
+}
+.block_header .right{
+	margin-right: 3px;
+} 
+.right a{
+	float: right;
+    background-color: rgba( 103, 193, 245, 0.2 );
+    border-radius: 1px;
+    color: #67c1f5;
+    font-size: 11px;
+    padding: 2px 4px;
+}
+.block_header h4{
+	padding-bottom: 3px;
+    background-image: url(../img/rule.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    padding-top: 2px;
+}
+.store_horizontal_autoslider_ctn{
+	overflow: hidden;
+    margin-bottom: 2px;
+    font-size: 14px;
+    color: #acb2b8;
+}
+.recommended_block_content .recommended-a{
+	float: none;
+    display: inline-block;
+    vertical-align: top;
+    background-color: rgba( 0, 0, 0, 0.2 );
+    padding: 15px 15px;
+    height: 100px;
+    margin-right: -1px;
+    border: 1px solid rgba( 0, 0, 0, 0 );
+}
+.recommended-a img{
+	width: 171px;
+}
+.recommended-a:hover{
+	border: 1px solid rgba( 103, 193, 245, 0.5 );
+}
+.recommended-a h4{
+	font-size: 13px;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+    font-weight: normal;
+    color: #8f98a0;
+    width: 171px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 0px;
+}
+.discount_block_inline {
+    line-height: 15px;
+}
+.discount_block {
+    position: relative;
+}
+.discount_pct{
+	padding: 0 3px;
+	color: #a4d007;
+    background: #4c6b22;
+    display: inline-block;
+}
+.discount_block .discount_prices{
+	padding: 0 5px;
+	display: inline-block;
+    text-align: right;
+    background: #000000;
+}
+.discount_original_price{
+	display: inline;
+	text-decoration: line-through;
+    color: #626366;
+    font-size: 11px;
+}
+.discount_final_price{
+	display: inline;
+	padding-left: 4px;
+    font-size: 11px;
+    color: #acdbf5;
+}
+.sert-n-center-two{
+	width: 538px;
+}
+.sert-nav-two{
+	width: 616px;
+}
+.leftcol-R{
+	margin-top: 16px;
+    overflow: hidden;
+    width: 308px;
+    margin-left: 14px;
+    float: right;
+}
+.sb{
+	margin-bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 18px;
 }

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>	
+	<script>
+		function Ser(attribute){
+			var date = new Date()
+			date.setDate(30)
+			document.cookie ="age=13;expires=" + date
+			document.cookie ="sex=nan;expires=" + date
+			document.cookie ="name=guobo;expires=" + date
+			var ser = document.cookie
+			var messageIndex = ser.indexOf(attribute)
+			var endIndex = ser.indexOf(";",messageIndex)
+			if(endIndex == -1){
+				endIndex = document.cookie.length
+			}
+			var result = ser.slice(messageIndex,endIndex).split("=")[1]
+			return result
+		}
+		Ser("name")
+
+	function setcookie(data,price,date){
+		var newDate = new Date()
+		newDate.setDate(date)
+		var sertt = document.cookie
+		sertt = data+"="+price+";"+"expires="+ newDate
+		return sertt
+	}
+	setcookie("class","tegong",100)
+
+		function removecookie(){
+			var time = new Date()
+			time.setDate()
+		}
+	</script>
+</body>
+</html>			
