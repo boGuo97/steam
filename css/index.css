@@ -382,8 +382,8 @@ span .input-nav a:hover{
 }
 .ceping span{color: purple;}
 .side-center .inof-span{
-	background-color: #555;color: #fff;padding:3px 10px;text-align: center;
-	margin-top: 8px;display:inline-block;border-radius: 2px;
+	background-color: #555;color: #fff;padding:0px 8px;text-align: center;
+	margin-top: 8px;display:inline-block;border-radius: 2px;line-height: 19px;
 }
 .ceping .haoping{color: skyblue}
 .ceping .pinglunshu{color: #fff}
@@ -472,11 +472,8 @@ span .input-nav a:hover{
 .inof-jingling{
 	float: right;
 }
-.inof-jingling span{
+.inof-jingling .wind{
 	display: inline-block;
-	width: 20px;
-	height: 20px;
-	background-image: url(../img/win.png);
 	background-repeat: no-repeat;
 	margin-right: 10px;
 }

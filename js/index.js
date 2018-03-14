@@ -14,7 +14,7 @@ $(".img-1").mouseenter(function(){
 			$HT.eq(n).fadeIn()
 		}
 		else{
-			$HT.eq(n).hide() 
+			$HT.eq().hide()
 		}
 	}
 })
