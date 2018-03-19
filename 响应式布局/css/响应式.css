@@ -1,0 +1,377 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;color: #fff;}
+a:hover{
+	color: #ff9900;
+}
+li{list-style: none;}
+body{
+	font-family: "微软雅黑";
+	color: #1f2420;
+	font-size: 12px;
+	background-color: #f7f7f7;
+}
+.conter{
+	width: 94%;
+	margin: 0 3%;
+}
+.conter:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.center{
+	width: 90%;
+	margin: 0 5%;
+}
+.center:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/*...................................顶部样式.................................................*/
+header{
+	height: 36px;
+	line-height: 36px;
+	border-bottom: 1px solid #ecc000;
+	background-color: #555555;
+}
+header ul{
+	float: right;
+}
+header ul li{
+	float: left;
+	padding: 0 20px;
+	border-right: 1px solid #999999;
+}
+header ul li a{
+	color: #fff;
+}
+.nome{
+	float: left;
+	color: #fff;
+}
+.noneborder{
+	border-right: none;
+}
+/*....................................导航条样式..............................................*/
+.logo{
+	display: block;
+	width: 151px;
+	height: 66px;
+	float: left;
+}
+.logo img{
+	height: 100%;
+}
+nav{
+	height: 66px;
+}
+nav ul{
+	float: right;
+}
+nav li{
+	float: left;
+	font-weight: bold;
+	font-size: 16px;
+	border-left: 1px solid #f0ede8;
+	padding: 0 24px;
+	line-height: 66px;
+}
+.conterli{
+	padding-right: 10px;
+}
+nav ul li a{
+	color: #7c7a65;
+}
+/*.....................................导航条下样式..........................................*/
+.shouru{
+	height: 62px;
+	background-color: #7c7266;
+	padding-left: 61px;
+}
+.shouru span{
+	line-height: 62px;
+	color: #fff;
+	padding-left: 20px;
+}
+.shouru .shouruspan{
+	margin-left: 5px;
+	margin-right: 7px;
+	padding: 5px 15px;
+	line-height: 34px;
+	color: #ff9900;
+	box-shadow: 1px 5px 5px 1px #555;
+	background-color: #fff;
+	border-radius: 2px;
+	letter-spacing:2px;
+}
+.shouru .shouruspantow{
+	float: right;
+	padding-right: 100px;
+}
+.shouru:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/*..............................................轮播图.....................................*/
+.wrap{
+	position:relative;
+	overflow:hidden;
+}
+#prev,#next{
+	position:absolute;
+	top:45%;
+	cursor:pointer;
+	transition:all .5s;
+	opacity: .7;
+}
+#prev:hover,#next:hover{
+	opacity: 1;
+	transform:scale(1.1);
+}
+#prev{
+	left:20px;
+}
+#next{
+	right:20px;
+}
+.wrap li{
+	float:left;
+}
+.wrap ul{
+	position: relative;
+	top: 0;
+	left: 0;
+}
+#navList{
+	position: absolute;
+	bottom:25px;
+	left:47%;
+}
+#navList span{
+	display:block;
+	width:16px;
+	height:16px;
+	border-radius:50%;
+	float:left;
+	margin-right:8px;
+	cursor:pointer;
+	background-color:#FFF;
+}
+#navList .focus{
+	background-color:#dd4012;
+}
+.over li img{
+	width: 100%;
+}
+/*....................................公告.....................................*/
+.recommend{
+	margin-top: 55px;
+	margin-bottom: 30px;
+}
+.gonggao{
+	display: flex;
+	justify-content:space-between;
+}
+.mend{
+	width: 32%;
+	box-shadow: 1px 1px 1px 1px #ddd;
+	padding: 14px 0;
+	border-radius: 1px;
+	background-color: #fff;
+}
+.mend .mendSpan{
+	float: left;
+	font-size: 31px;
+	color: #fe9900;
+	font-weight: bold;
+	padding-left: 15%;
+}
+.mend p{
+	padding-left: 50%;
+	color: #99999b;
+}
+.mend-lan{
+	margin-top: 20px;
+	box-shadow: 1px 1px 1px 1px #ddd;
+	background-color: #fff;
+	padding: 10px 24px;
+}
+.mend-lan span{
+	color: #555;
+}
+.mend-lan .mend-lan-span{
+	color: #a9a9a7;
+}
+.mend-lan .noneSpan{
+	color: #a9a9a7;
+}
+.mend-lan .mend-R-span{
+	display: block;
+	float: right;
+}
+.mend-R-span a{
+	color: #fe9900;
+}
+.product{
+	margin-top: 24px;
+	border-top: 2px solid #fe9901;
+	box-shadow: 1px 1px 1px 1px #ddd;
+}
+.product:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.product .product-left{
+	width: 23%;
+	float: left;
+	background-color: #f5f9fa;
+	padding-top: 43px;
+	padding-bottom: 10.2%;
+	text-align: center;
+	border-right: 1px solid #ddd;
+	box-sizing:border-box;
+}
+.product .product-rig{
+	width: 77%;
+	float: left;
+	box-sizing:border-box;
+	background-color: #fff;
+}
+.product-rig .product-chase{
+	border-bottom: 1px solid #ddd;
+	height: auto;
+}
+.product-rig .product-chase-tow{
+	border-bottom: none;
+}
+.product-left h1{
+	font-weight: normal;
+	color: #6f6f65;
+	font-size: 23px;
+	padding-bottom: 30px;
+}
+.chase-o{
+	width: 25%;
+	float: left;
+	text-align: center;
+	padding: 16px 0;
+	border-right: 1px solid #ddd;
+}
+.chase-o .chase-span{
+	font-size: 27px;
+	color: #92a0a3;
+}
+.chase-t{
+	width: 30%;
+	float: left;
+	padding: 13px 100px;
+	border-right: 1px solid #ddd;
+}
+.chase-s{
+	width: 19%;
+	float: right;
+	padding-top: 15px;
+}
+.product-chase:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.chase-t:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.chase-t-o{
+	float: left;
+}
+.product-left p{
+	margin-top: 20px;
+	color: #635d51;
+	font-size: 14px;
+}
+.chase-t-o .chase-span-two,.chase-t-t .chase-span-two{
+	font-size: 20px;
+	color: #ff9900;
+}
+.chase-t-o .chase-span-san,.chase-t-t .chase-span-san{
+	color: #9f9f9d;
+}
+.chase-t-t{
+	float: right;
+}
+.chase-s button{
+	border-radius: 3px;
+	border: none;
+	outline: none;
+	background-color: #ff9900;
+}
+.chase-s button a{
+	display: block;
+	padding: 12px 55px;
+}
+.chase-s button a:hover{
+	color: #fff;
+}
+.chase-o-two{
+	padding: 8px 0;
+} 
+.chase-o-two .chase-span-san{
+	font-size: 11px;
+	color: #9f9f9d;
+}
+.product .product-left-two{
+	padding-bottom: 13.5%;
+}
+.chase-s .button-two{
+	background-color: #cccccc;
+}
+.chase-s  .button-two a{
+	padding: 12px 48px;
+}
+/*......................................底部样式...........................*/
+.footer{
+	background-color: #fff;
+	font-size: 14px;
+	padding: 45px 0;
+}
+.footer a{
+	color: #676767;
+	font-size: 12px;
+}
+.foot-left{
+	width: 23%;
+	float: left;
+}
+.foot-rig{
+	padding-left: 23%;
+}
+.foot-rig ul{
+	float: left;
+	padding-right: 12%;
+}
+.foot-rig .footer-ul{
+	padding-right: 0;
+}
+.foot-rig:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.dir{
+	padding-top: 39px;
+	padding-bottom: 70px;
+	text-align: center;
+	font-size: 12px;
+	color: #989aa6;
+}
+.dir-center{
+	width: 500px;
+	margin: 0 auto;
+}
+.dir p{
+	margin-top: 10px;
+}

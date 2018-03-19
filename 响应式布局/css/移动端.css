@@ -1,0 +1,160 @@
+@media (max-width: 480px){
+	header .nome,header .noneli{
+		display: none;
+	}
+	header ul li{
+		padding: 0 10px;
+	}
+	.logo{
+		display: block;
+		width: 151px;
+		float: none;
+		margin: 0 auto;
+		margin-top: 1px;
+	}
+	nav{
+		height: auto;
+	}
+	nav ul{
+		float: none;
+		padding: 0 20px;
+		display: flex;
+		justify-content:space-between;
+	}
+	nav li{
+		float: none;
+		font-weight: normal;
+		font-size: 14px;
+		border: none;
+		padding: 0;
+		line-height: 50px;
+	}
+
+	nav .noneli{
+		display: none;
+	}
+	.shouru{
+		height: auto;
+		padding-left: 0;	
+		text-align: center;
+	}
+	.shouru span{
+		display: inline-block;
+		width: 100%;
+		line-height: 40px;
+	}
+	.shouru .shouruspan{
+		background-color: rgba(255,255,255,0);
+	}
+	.shouru .shouruspantow{
+		padding-right: 0; 
+	}
+	#navList{
+		bottom: 5px;
+		list-style: 43%;
+	}
+	#navList span{
+		width: 10px;
+		height: 10px;
+	}
+	.recommend{
+		margin-bottom: 30px;
+		width: 94%;
+		margin: 0 3%;
+		margin-top: 30px;
+	}
+	.gonggao{
+		flex-wrap:wrap;
+	}
+	.mend{
+		width: 100%;
+		padding: 8px 0;
+		margin-bottom: 18px;
+	}
+	.mend-lan-span .noneSpan{
+		display: none;
+	}
+	.mend-lan{
+		display: flex;
+		justify-content:space-between;
+		padding: 10px 18px;
+		margin-top: 0;
+	}
+	.mend-lan .shenglvSpan{
+		width: 55%;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;  /*2行*/
+		overflow: hidden;
+	}
+	/*.........................................公告移动样式.........................*/
+	.product .product-left{
+		float: none;
+		width: 100%;
+		padding-bottom: 5%;
+		padding-top: 25px;
+	}
+	.product-left .product-left-p{
+		display: flex;
+		justify-content:space-between;
+		padding: 0 15%;
+	}
+	.product .product-rig{
+		float: none;
+		width: 100%;
+	}
+	.product-left p{
+		margin-top: 0;
+	}
+	.product-rig .product-chase-san{
+		display: none;
+	}
+	.chase-o,.chase-t{
+		border-right: none;
+	}
+	.chase-t{
+		width: 59%;
+		padding: 10px 0;
+		padding-left: 30px;
+	}
+	.chase-s{
+		float:none;
+		width: 75%;
+		padding-top: 83px;
+		padding-bottom: 25px;
+		margin: 0 auto;
+	}
+	.chase-s button{
+		width: 100%;
+	}
+	.chase-s button a{
+		padding: 12px 0;
+	}
+	.product-left-two{
+		display: none;
+	}
+	.chase-t{
+		padding-top: 16px;
+	}
+	.chase-s .button-san{
+		background-color: #cccccc;
+	}
+	.product-two{
+		border: none;
+		margin-top: 0;
+	}
+	.foot-left{
+		display: none;
+		float: none;
+	}
+	.foot-rig{
+		padding-left: 0;
+	}
+	.foot-rig ul{
+		padding-right: 4%;
+	}
+	.dir-center{
+		width: auto;
+		min-width: 300px;
+	}
+}
